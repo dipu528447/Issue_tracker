@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="container my-4 d-flex justify-content-between">
+        <h1 class="fs-1">Issue Tracker</h1>
+        <div class="d-flex">
+            <h1 class="fs-3 align-self-end bg-info p-2 rounded" id="totalIssue">Total: 0</h1>
+            <h1 class="fs-3 align-self-end bg-success p-2 rounded" id="openIssue">Opened: 0</h1>
+            <h1 class="fs-3 align-self-end bg-danger p-2 rounded" id="closeIssue">Closed: 0</h1>
+        </div>        
+    </header>
+    <section class="container">
+        <section class="sectionAddNewIssue p-5">
+            <form id="issueForm">
+                <h1 class="fs-3">Add New Issue</h1>
+                <div class="mb-3">
+                    <label for="lblDescription" class="form-label">Description</label>
+                    <input type="text" class="form-control" id="txtDescription" placeholder="Describe the issue" required>
+                </div>
+                <div class="mb-3">
+                    <label for="lblServerity" class="form-label">Severity</label>
+                    <select class="form-select" aria-label="lblSeverity" id="selectServerity" required>
+                        <option selected value="">Select</option>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="lblAssignedTo" class="form-label">Assigned To</label>
+                    <input type="text" class="form-control" id="txtAssignedTo" placeholder="Enter Responsible" required>
+                </div>
+                <button class="btn btn-primary" id="btnAdd">Add</button>
+            </form>
+        </section>
+        <section id="main">
+
+        </section>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
